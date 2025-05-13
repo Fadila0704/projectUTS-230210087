@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fairmont Gold King SK</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background-color: #f4f0e1;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .room-header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    .room-header img {
+      width: 500px;
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .room-description {
+      flex: 1;
+    }
+
+    .room-description h2 {
+      color: #6c4f3d;
+      font-size: 1.8em;
+      margin-bottom: 15px;
+    }
+
+    .room-description p {
+      line-height: 1.6;
+      font-size: 1em;
+      color: #5a4535;
+    }
+
+    .bathroom-section {
+      margin-top: 50px;
+      position: relative;
+    }
+
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.4s ease-in-out;
+    }
+
+    .slides img {
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2em;
+      background: rgba(0, 0, 0, 0.3);
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      z-index: 2;
+    }
+
+    .arrow.left {
+      left: 10px;
+    }
+
+    .arrow.right {
+      right: 10px;
+    }
+
+    .btn-back {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 12px 24px;
+      background-color: #6c4f3d;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    .btn-back:hover {
+      background-color: #4d362a;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="room-header">
+      <img src="img/room1.jpg" alt="Fairmont Gold King SK">
+      <div class="room-description">
+        <h2>Room with a view</h2>
+        <p>Kamar Fairmont Gold menawarkan ruang yang nyaman dengan pemandangan menakjubkan cakrawala kota Jakarta. Para tamu akan menikmati akomodasi yang ditata dengan elegan serta akses eksklusif ke Fairmont Gold Lounge yang menyediakan sarapan setiap hari, teh sore, hidangan pembuka di malam hari, minuman ringan sepanjang hari, dan penggunaan ruang rapat secara gratis.
+        </p>
+      </div>
+    </div>
+
+    <div class="bathroom-section">
+      <h2 style="margin-bottom: 20px; color: #6c4f3d;"></h2>
+
+      <div class="carousel">
+        <button class="arrow left" onclick="prevSlide()">❮</button>
+        <div class="slides" id="slides">
+          <img src="img/bathroom.jpg" alt="Kamar Mandi 1">
+          <img src="img/Bathroom2.jpg" alt="Kamar Mandi 2">
+          <img src="img/fairmont-jkt.jpg">
+        </div>
+        <button class="arrow right" onclick="nextSlide()">❯</button>
+      </div>
+    </div>
+
+    <h3 style="color:#6c4f3d; margin-top: 20px;">Fasilitas Kamar</h3>
+  <ul style="color: #5a4535; line-height: 1.6; padding-left: 20px;">
+    <li><strong>Bedding:</strong> King size bed x1, Crib tersedia atas permintaan</li>
+    <li><strong>Food and Beverage:</strong> Fasilitas membuat kopi/teh, Air mineral dalam botol, Ketel listrik</li>
+    <li><strong>Bathroom:</strong> Jubah mandi, Kamar mandi aksesibel</li>
+    <li><strong>Media and Technology:</strong> Plug and play panel, Internet nirkabel di kamar</li>
+    <li><strong>Service and Equipment:</strong> 
+      Info darurat di kamar, Sprinkler, Alarm asap, 
+      Alarm visual untuk tuna rungu, Brankas dalam kamar, 
+      Pintu self-closing, Jam alarm, Pengunci tambahan, 
+      Alarm asap terdengar, Lampu ketuk untuk tuna rungu
+    </li>
+    <li><strong>Security:</strong> Lubang intip (peephole), Kunci pintu kartu</li>
+    <li><strong>Tambahan Kenyamanan:</strong> Koran harian, Menu bantal, Pengering rambut, 
+      Setrika & papan setrika, Tirai anti cahaya, Jam alarm, 
+      Layanan turn-down, Pemoles sepatu, Nampan sambutan, 
+      Sarapan di tempat tidur, Panggilan bangun oleh operator
+    </li>
+    <li><strong>AC dan Area Kerja:</strong> AC, Lampu meja yang dapat disesuaikan, 
+      Meja kerja, Kursi roda
+    </li>
+  </ul>
+</div>
+
+
+    <a href="room.html" class="btn-back">← Back to Home</a>
+  </div>
+
+  <script>
+    let currentIndex = 0;
+    const slides = document.getElementById('slides');
+    const totalSlides = slides.children.length;
+
+    function updateSlidePosition() {
+      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateSlidePosition();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateSlidePosition();
+    }
+  </script>
+</body>
+</html>

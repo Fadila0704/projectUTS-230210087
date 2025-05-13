@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Profil - FairMont Hotel</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-image: url("img/lobby.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #fff;
+      padding: 60px 20px;
+    }
+
+    .profile-container {
+      background: rgba(0, 0, 0, 0.5); 
+      padding: 40px;
+      border-radius: 25px;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .profile-container h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      color: #6F4F37;
+      margin-bottom: 25px;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .profile-container p {
+      font-size: 20px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      text-align: justify;
+      color: #d8b29e; 
+    }
+
+    .btn-back {
+      margin-top: 30px;
+      display: inline-block;
+      padding: 14px 30px;
+      background: #6F4F37;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: bold;
+      font-size: 18px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .btn-back:hover {
+      background-color: #5A3D23; 
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      .profile-container {
+        padding: 30px 20px;
+      }
+
+      .profile-container h1 {
+        font-size: 36px;
+      }
+
+      .profile-container p {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-container">
+    <h1>Selamat Datang di FairMont Hotel</h1>
+    <p>
+      Berdiri megah di jantung kota Jakarta, <strong>FairMont Hotel</strong> adalah lambang kemewahan modern dengan sentuhan elegan. Dibalut arsitektur kontemporer dan pemandangan kota yang menawan, hotel ini menghadirkan tempat peristirahatan kelas dunia bagi mereka yang menghargai kenyamanan dan prestise.
+    </p>
+    <p>
+      Sejak 2015, kami telah menjamu para tamu istimewa dari seluruh dunia — mulai dari tokoh bisnis hingga keluarga kerajaan. <strong>Lebih dari 200 kamar & suite mewah</strong> kami dirancang untuk menghadirkan kesempurnaan: tempat tidur premium, pencahayaan elegan, smart TV, dan layanan 24 jam yang siap memanjakan setiap detik Anda.
+    </p>
+    <p>
+      Rayakan momen spesial Anda di <strong>ballroom megah</strong> atau nikmati sore santai di <strong>sky lounge</strong> dengan panorama sunset Jakarta yang memukau. Rilekskan tubuh dan pikiran di <strong>Spa & Wellness Center</strong> dengan layanan kelas dunia, aromaterapi eksotis, dan suasana yang menenangkan.
+    </p>
+    <p>
+      Di FairMont, kami percaya bahwa pelayanan bukan sekadar kewajiban, tapi seni yang lahir dari hati. Setiap senyuman staf kami adalah janji akan pengalaman menginap yang tak hanya nyaman — tapi juga tak terlupakan.
+    </p>
+
+    <a href="home.html" class="btn-back">← Back to Home</a>
+  </div>
+</body>
+</html>

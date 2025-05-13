@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kontak - Fairmont Hotel Jakarta</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+      color: #333;
+    }
+
+    header {
+      background-color: #8B4513;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      margin-bottom: 10px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 30px 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .contact-info {
+      line-height: 1.8;
+    }
+
+    .contact-info h2 {
+      color: #8B4513;
+      margin-bottom: 10px;
+    }
+
+    .contact-info p {
+      font-size: 1rem;
+    }
+
+    .contact-info a {
+      color: #8B4513;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    .map iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    form label {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    form input,
+    form textarea {
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    form button {
+      margin-top: 20px;
+      padding: 12px;
+      background-color: #8B4513;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #A0522D;
+    }
+
+    footer {
+      background-color: #8B4513;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Hubungi Kami</h1>
+  <p>Fairmont Hotel Jakarta — Layanan Terbaik Untuk Kenyamanan Anda</p>
+</header>
+
+<div class="container">
+  <div class="contact-info">
+    <h2>Informasi Kontak</h2>
+    <p><strong>Alamat:</strong><br>
+      Jl. Asia Afrika No.8, Gelora Bung Karno,<br>
+      Jakarta Pusat 10270, Indonesia</p>
+
+    <p><strong>Telepon:</strong> +62 21 2970 3333</p>
+    <p><strong>Email:</strong> <a href="mailto:jakarta@fairmont.com">jakarta@fairmont.com</a></p>
+
+    <h2>Lokasi Kami</h2>
+    <div class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.4654967644373!2d106.80060447407695!3d-6.204164793781695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f151b0c1ce17%3A0xf3f7956904d1556e!2sFairmont%20Jakarta!5e0!3m2!1sen!2sid!4v1715100000000" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+
+  <div class="form">
+    <h2>Kirim Pesan</h2>
+    <form action="#" method="post">
+      <label for="name">Nama</label>
+      <input type="text" id="name" name="name" placeholder="Nama Anda" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Email Anda" required>
+
+      <label for="message">Pesan</label>
+      <textarea id="message" name="message" rows="6" placeholder="Tulis pesan Anda di sini..." required></textarea>
+
+      <button type="submit">Kirim Pesan</button>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2025 Fairmont Hotel Jakarta. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Restoran - FairMont Hotel</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url("img/restaurant.jpeg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      padding: 60px 20px;
+      color: #fff;
+    }
+
+    .restaurant-container {
+      max-width: 960px;
+      margin: auto;
+      background: linear-gradient(to right, rgba(0,0,0,0.75), rgba(0,0,0,0.65));
+      padding: 50px 40px;
+      border-radius: 20px;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.5);
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 40px;
+      color: #d2b48c; 
+      text-align: center;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    p {
+      font-size: 17px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    .menu-container {
+      margin-top: 40px;
+      text-align: center;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .menu-item {
+      display: inline-block;
+      background-color: rgba(0, 0, 0, 0.7);
+      margin: 10px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+      width: 250px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .menu-item:hover {
+      transform: scale(1.05);
+    }
+
+    .menu-item img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .menu-item h3 {
+      font-size: 24px;
+      color: #d2b48c;
+      margin-top: 15px;
+    }
+
+    .menu-detail {
+      display: none;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 10px;
+      text-align: center;
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+      color: #fff;
+      animation: fadeDetail 0.5s ease;
+    }
+
+    .menu-item:hover .menu-detail {
+      display: block;
+    }
+
+    .menu-detail p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .menu-detail .price {
+      font-size: 20px;
+      font-weight: bold;
+      color: #d2b48c;
+      margin-top: 10px;
+    }
+
+    @keyframes fadeDetail {
+      from {opacity: 0; transform: translateY(5px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .btn-back {
+      display: inline-block;
+      margin-top: 30px;
+      text-decoration: none;
+      background-color: #d2b48c;
+      color: #000;
+      padding: 12px 26px;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 16px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+    }
+
+    .btn-back:hover {
+      background-color: #c8ad7f;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 16px rgba(0,0,0,0.4);
+    }
+
+    @media (max-width: 768px) {
+      .restaurant-container {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      .menu-item {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="restaurant-container">
+    <h1>Kelezatan Kuliner di FairMont Hotel</h1>
+
+    <p>
+      Di FairMont Hotel, setiap sajian bukan sekadar hidangan, melainkan karya seni yang dirancang untuk memanjakan seluruh indera Anda. Kami mengundang Anda menjelajahi dunia rasa yang tak hanya menggoda lidah, tetapi juga menciptakan kenangan indah dalam setiap suapan.
+    </p>
+
+    <div class="menu-container">
+      <div class="menu-item">
+        <img src="img/salmon.jpeg" alt="Menu 1">
+        <h3>Salmon Grill</h3>
+        <div class="menu-detail">
+          <p>Hidangan salmon panggang dengan saus lemon butter, disajikan dengan sayuran panggang dan kentang tumbuk.</p>
+          <span class="price">Rp 350.000</span>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="img/beef.jpeg" alt="Menu 2">
+        <h3>Beef Wellington</h3>
+        <div class="menu-detail">
+          <p>Daging sapi yang dimasak dengan sempurna, dibungkus dengan puff pastry dan disajikan dengan saus demi-glace.</p>
+          <span class="price">Rp 650.000</span>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="img/souffle.jpeg" alt="Menu 3">
+        <h3>Chocolate Soufflé</h3>
+        <div class="menu-detail">
+          <p>Puding cokelat lembut dengan rasa yang kaya, disajikan dengan es krim vanila yang memanjakan.</p>
+          <span class="price">Rp 150.000</span>
+        </div>
+      </div>
+    </div>
+
+    <a href="home.html" class="btn-back">← Back to Home</a>
+  </div>
+
+</body>
+</html>

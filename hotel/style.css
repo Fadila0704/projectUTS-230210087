@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f1f5f9;
+    background-image: url("img/fairmont.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.menu {
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    height: 70px;
+    width: 100%;
+    font-size: 20px;
+    background: #5D4037; /* lebih muda dari #3E2723 */
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 20pt;
+    color: #ffffff;
+    margin: 10px 20px;
+    padding: 5px;
+    font-weight: 700;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu ul li {
+    position: relative;
+}
+
+.menu ul li a {
+    display: block;
+    padding: 15px 22px;
+    color: #f1f5f9;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+    border-radius: 8px;
+}
+
+.menu ul li a:hover,
+.menu ul li a.active {
+    background: #A1887F; /* lebih muda dari #8D6E63 */
+    color: #ffffff;
+}
+
+.menu ul li .dropdown {
+    display: none;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    background: #8D6E63; /* lebih muda dari #5D4037 */
+    min-width: 200px;
+    z-index: 1000;
+    padding: 8px 0;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.menu ul li:hover .dropdown {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu ul li .dropdown li a {
+    padding: 12px 20px;
+    color: #f8fafc;
+    transition: 0.2s ease;
+}
+
+.menu ul li .dropdown li a:hover {
+    background: #A1887F; /* lebih muda */
+    color: #ffffff;
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Fadila</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #fcefe3, #f8e1d4);
+      color: #4e342e;
+      animation: fadeIn 1.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .profile-card {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 40px;
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      transition: transform 0.3s ease;
+    }
+
+    .profile-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .left {
+      flex: 1 1 300px;
+      text-align: center;
+    }
+
+    .left img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #d7b19d;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .right {
+      flex: 2 1 500px;
+      padding-left: 30px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #a1887f;
+      margin-bottom: 5px;
+    }
+
+    h3 {
+      font-weight: 500;
+      margin-bottom: 20px;
+      color: #6d4c41;
+    }
+
+    .description {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 25px;
+      color: #5d4037;
+    }
+
+    .quote {
+      font-style: italic;
+      color: #8d6e63;
+      font-size: 0.95rem;
+      margin-bottom: 30px;
+      background-color: #fce4ec;
+      padding: 10px 15px;
+      border-left: 5px solid #ecb3c4;
+      border-radius: 5px;
+    }
+
+    .buttons a {
+      display: inline-block;
+      margin-right: 15px;
+      margin-bottom: 10px;
+      padding: 12px 22px;
+      background: #bcaaa4;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .buttons a:hover {
+      background: #8d6e63;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      background-color: #d7ccc8;
+      color: #4e342e;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .profile-card {
+        flex-direction: column;
+        padding: 30px 20px;
+      }
+
+      .right {
+        padding-left: 0;
+        text-align: center;
+      }
+
+      .buttons a {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="profile-card">
+    <div class="left">
+      <img src="img/saya.jpg" alt="Fadila">
+    </div>
+    <div class="right">
+      <h1>Fadila</h1>
+      <h3>Mahasiswa S1 Teknik Informatika</h3>
+      <p class="description">
+        Saya adalah seorang mahasiswa yang sedang menekuni dunia Teknik Informatika dengan penuh semangat. Saya percaya bahwa teknologi adalah alat yang luar biasa untuk memecahkan masalah dan memperbaiki kualitas hidup manusia.
+        <br><br>
+        Fokus saya saat ini adalah memperdalam pengembangan web dan aplikasi, baik dari sisi frontend maupun backend. Saya senang belajar hal baru, bekerja secara tim maupun individu, dan terus mencari cara untuk menciptakan produk yang bermanfaat.
+        <br><br>
+        Selain coding, saya juga suka membaca buku pengembangan diri, mendesain UI, dan menyeduh kopi di pagi hari sebagai sumber semangat. Saya percaya bahwa belajar dan berkembang adalah proses tanpa batas.
+      </p>
+      <p class="quote">“Kode yang baik bukan hanya berjalan dengan benar, tapi juga dibaca dengan indah.”</p>
+
+      <div class="buttons">
+        <a href="https://github.com/Fadila0704" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://wa.me/6281268225584" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="mailto:fadilawahab844@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Fadila | Dibuat dengan semangat & secangkir kopi ☕🌷
+  </footer>
+
+</body>
+</html>

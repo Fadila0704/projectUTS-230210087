@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rooms & Suite | Rooms Fairmont Hotel Jakarta</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background-color: #f4f0e1;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    aside {
+      background-color: #6c4f3d;
+      color: white;
+      width: 220px;
+      padding: 30px 20px;
+    }
+
+    aside h2 {
+      font-size: 1.6em;
+      margin-bottom: 30px;
+    }
+
+    .nav-link {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      background-color: #8b6f56;
+      transition: background 0.3s;
+    }
+
+    .nav-link:hover {
+      background-color: #4d362a;
+    }
+
+    main {
+      flex-grow: 1;
+      padding: 40px;
+    }
+
+    .room {
+      background-color: white;
+      display: flex;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-decoration: none;
+    }
+
+    .room:hover {
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    .room img {
+      width: 250px;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .room-content {
+      padding: 20px;
+      background-color: #f1e1c1;
+      flex-grow: 1;
+    }
+
+    .room-title {
+      font-size: 1.4em;
+      color: #6c4f3d;
+      margin-bottom: 10px;
+    }
+
+    .room-info {
+      font-size: 0.95em;
+      color: #8b6f56;
+      margin-bottom: 10px;
+    }
+
+    .room-description {
+      color: #333;
+      line-height: 1.5;
+    }
+
+    .btn-home {
+      margin-top: 30px;
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #6c4f3d;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .btn-home:hover {
+      background-color: #4d362a;
+    }
+
+    footer {
+      background-color: #6c4f3d;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+  <script>
+    function filterRooms(type) {
+      document.querySelectorAll('.room').forEach(room => {
+        const roomType = room.dataset.type;
+        room.style.display = (type === 'all' || roomType === type) ? 'flex' : 'none';
+      });
+    }
+  </script>
+</head>
+<body>
+  <aside>
+    <h2>Fairmont Hotel</h2>
+    <a href="#" class="nav-link" onclick="filterRooms('all')">Semua</a>
+    <a href="#" class="nav-link" onclick="filterRooms('room')">Rooms</a>
+    <a href="#" class="nav-link" onclick="filterRooms('suite')">Suite</a>
+    <a href="#" class="nav-link" onclick="filterRooms('Penthouse')">Penthouse</a>
+    <a href="#" class="nav-link" onclick="filterRooms('Apartment')">Apartment</a>
+    <a href="home.html" class="btn-home">Back to Home</a>
+  </aside>
+
+  <main>
+    <a href="room-detail1.html" class="room" data-type="room">
+      <img src="img/room1.jpg" alt="Fairmont Gold King SK">
+      <div class="room-content">
+        <div class="room-title">Fairmont Gold King SK</div>
+        <div class="room-info">King Size Bed(s) x1 · 49 m² · 3 orang · Pemandangan kota</div>
+        <div class="room-description">49 m², tempat tidur King, boleh merokok, lantai atas, 
+          akses ke Fairmont Gold Lounge, bar pribadi dengan canapés, tempat tidur dan linen mewah. 
+          TV LED 42", WiFi, dan akses Internet berkecepatan tinggi.</div>
+      </div>
+    </a>
+
+    <a href="room-detail2.html" class="room" data-type="room">
+      <img src="img/room2.jpg" alt="Deluxe King NS">
+      <div class="room-content">
+        <div class="room-title">Deluxe King NS</div>
+        <div class="room-info">King bed(s) x1 · 69 m² · 3 orang · Menghadap kota</div>
+        <div class="room-description">Deluxe King (Non-Smoking) – Luas 69 m² (742 kaki persegi), kamar luas dengan tempat tidur King yang nyaman. Dilengkapi dengan tempat tidur dan linen premium, TV LED 49 inci, Wi-Fi, serta akses internet berkecepatan tinggi.</div>
+      </div>
+    </a>
+
+    <a href="suite-detail1.html" class="room" data-type="suite">
+      <img src="img/suite1.jpg" alt="FGold 2Bedroom Signature Suite">
+      <div class="room-content">
+        <div class="room-title">2Bedroom Signature Suite</div>
+        <div class="room-info">King Size bed(s) x2 · 172 m² · 6 orang · Pemandangan Golf</div>
+        <div class="room-description">Suite 2 Kamar Tidur – Luas 172 m² (1.851 kaki persegi), terdiri dari dua kamar tidur dengan tempat tidur King, terletak di lantai privat untuk privasi maksimal. Dilengkapi dengan bar pribadi dan canapés, tempat tidur serta linen mewah, TV LED 49 inci, Wi-Fi dan akses internet berkecepatan tinggi. Nikmati kamar mandi bergaya spa Jepang dengan pancuran rainforest, serta mesin pembuat kopi desainer untuk kenyamanan ekstra.</div>
+      </div>
+    </a>
+
+    <a href="suite-detail2.html" class="room" data-type="suite">
+      <img src="img/suite2.jpg" alt="FGold 1Bedroom Signature Suite">
+      <div class="room-content">
+        <div class="room-title">1Bedroom Signature Suite</div>
+        <div class="room-info">King Size bed x1 · 129 m² · 4 orang · Pemandanggan Golf</div>
+        <div class="room-description">Signature One-Bedroom Suite – Luas 129 m² (1.388 kaki persegi), terletak di lantai privat dan dilengkapi dengan tempat tidur King. Nikmati kenyamanan bar pribadi dengan canapés, tempat tidur dan linen mewah, TV LED 49 inci, Wi-Fi, dan akses internet berkecepatan tinggi. Kamar mandi bergaya spa Jepang dengan pancuran rainforest serta mesin kopi desainer menambah sentuhan kemewahan untuk pengalaman menginap yang istimewa.</div>
+      </div>
+    </a>
+
+    <a href="presuite-detail.html" class="room" data-type="Penthouse">
+      <img src="img/pre-suite.jpg" alt="Presidential Suite">
+      <div class="room-content">
+        <div class="room-title">Suite Presiden</div>
+        <div class="room-info">King Size bed(s) x1 · 303 m² · 4 orang · Panorama Golf</div>
+        <div class="room-description">Presidential Suite – Luas 303 m² (3.261 kaki persegi), suite mewah dengan tempat tidur King yang terletak di lantai privat dan bebas rokok. Dilengkapi dengan bar pribadi, tempat tidur serta linen berkualitas tinggi, TV LED 49 inci, Wi-Fi, dan akses internet berkecepatan tinggi. Dirancang untuk menghadirkan kenyamanan dan eksklusivitas tertinggi bagi para tamu istimewa.</div>
+      </div>
+    </a>
+
+    <a href="apartment-detail1.html" class="room" data-type="Apartment">
+      <img src="img/sky1.jpg" alt="Sky Suite / 1 Bedroom NS">
+      <div class="room-content">
+        <div class="room-title">Sky Suite / 1 Bedroom NS</div>
+        <div class="room-info">King Size bed(s) x1 · 85 m² · 4 orang</div>
+        <div class="room-description">Sky Suite 1 Kamar Tidur (Non-Smoking) – Luas 85 m² (914 kaki persegi), suite mewah dengan layanan lengkap, dilengkapi dengan 1 tempat tidur King. Dapatkan pengalaman eksklusif dengan check-in dan lift pribadi.</div>
+      </div>
+    </a>
+
+    <a href="apartment-detail2.html" class="room" data-type="Apartment">
+      <img src="img/sky2.jpg" alt="Sky Suite / 2 Bedrooms SK">
+      <div class="room-content">
+        <div class="room-title">Sky Suite / 2 Bedrooms SK</div>
+        <div class="room-info">King Size bed(s) x1 · 128 m² · 6 orang</div>
+        <div class="room-description">Sky Suite 2 Kamar Tidur (Smoking) – Luas 128 m² (1.377 kaki persegi), suite mewah dengan layanan lengkap, terdiri dari 1 tempat tidur King dan 1 tempat tidur Queen. Dilengkapi dengan check-in dan lift eksklusif, serta dapur yang sepenuhnya dilengkapi untuk kenyamanan maksimal.</div>
+      </div>
+    </a>
+  </main>
+</body>
+</html>
